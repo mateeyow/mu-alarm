@@ -6,9 +6,105 @@ export default [
     "time": "21:00"
   },
   {
+    "title": "Abyss Domination",
+    "description": "Kill enemy alliance and secure the flag",
+    "frequency": "Monday",
+    "time": "22:30"
+  },
+  {
+    "title": "Abyss Domination",
+    "description": "Kill enemy alliance and secure the flag",
+    "frequency": "Friday",
+    "time": "22:30"
+  },
+  {
+    "title": "Abyss 3V3 PK",
+    "description": "Go against people 3V3",
+    "frequency": "Friday",
+    "time": "20:00"
+  },
+  {
+    "title": "Babel",
+    "description": "Kill the boss of each floor of the tower of Babel",
+    "frequency": "Tuesday",
+    "time": "22:30"
+  },
+  {
+    "title": "Babel",
+    "description": "Kill the boss of each floor of the tower of Babel",
+    "frequency": "Thursday",
+    "time": "22:30"
+  },
+  {
+    "title": "Roland City War",
+    "description": "War to be Rolan's lord",
+    "frequency": "Sunday",
+    "time": "22:00"
+  },
+  {
+    "title": "Red Fortress",
+    "description": "Survival of the fittest",
+    "frequency": "Friday",
+    "time": "22:00"
+  },
+  {
+    "title": "Song of Ice and Fire",
+    "description": "Defeat enemies and occupy cannon towers to win!",
+    "frequency": "Friday",
+    "time": "21:30"
+  },
+  {
+    "title": "Lost Tower",
+    "description": "Pick up glyps and pick up keys to proceed to the next floor",
+    "frequency": "Tuesday",
+    "time": "22:00"
+  },
+  {
+    "title": "Lost City",
+    "description": "Defeat monsters and boss along with your alliance",
+    "frequency": "Monday",
+    "time": "16:00"
+  },
+  {
+    "title": "Lost City",
+    "description": "Defeat monsters and boss along with your alliance",
+    "frequency": "Monday",
+    "time": "20:30"
+  },
+  {
     "title": "Abyss Roland's Feast",
     "description": "ABYSS EVENT - Attend Roland's Feast and gain exp",
-    "frequency": "Everyday",
+    "frequency": "Monday",
+    "time": "20:50"
+  },
+  {
+    "title": "Abyss Roland's Feast",
+    "description": "ABYSS EVENT - Attend Roland's Feast and gain exp",
+    "frequency": "Tuesday",
+    "time": "20:50"
+  },
+  {
+    "title": "Abyss Roland's Feast",
+    "description": "ABYSS EVENT - Attend Roland's Feast and gain exp",
+    "frequency": "Thursday",
+    "time": "20:50"
+  },
+  {
+    "title": "Abyss Roland's Feast",
+    "description": "ABYSS EVENT - Attend Roland's Feast and gain exp",
+    "frequency": "Friday",
+    "time": "20:50"
+  },
+  {
+    "title": "Abyss Roland's Feast",
+    "description": "ABYSS EVENT - Attend Roland's Feast and gain exp",
+    "frequency": "Saturday",
+    "time": "20:50"
+  },
+  {
+    "title": "Abyss Roland's Feast",
+    "description": "ABYSS EVENT - Attend Roland's Feast and gain exp",
+    "frequency": "Sunday",
     "time": "20:50"
   },
   {
@@ -20,7 +116,37 @@ export default [
   {
     "title": "Roland's feast",
     "description": "Attend Roland's Feast and gain exp",
-    "frequency": "Everyday",
+    "frequency": "Monday",
+    "time": "21:02"
+  },
+  {
+    "title": "Roland's feast",
+    "description": "Attend Roland's Feast and gain exp",
+    "frequency": "Tuesday",
+    "time": "21:02"
+  },
+  {
+    "title": "Roland's feast",
+    "description": "Attend Roland's Feast and gain exp",
+    "frequency": "Wednesday",
+    "time": "21:02"
+  },
+  {
+    "title": "Roland's feast",
+    "description": "Attend Roland's Feast and gain exp",
+    "frequency": "Thursday",
+    "time": "21:02"
+  },
+  {
+    "title": "Roland's feast",
+    "description": "Attend Roland's Feast and gain exp",
+    "frequency": "Friday",
+    "time": "21:02"
+  },
+  {
+    "title": "Roland's feast",
+    "description": "Attend Roland's Feast and gain exp",
+    "frequency": "Saturday",
     "time": "21:02"
   },
   {

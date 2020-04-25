@@ -19,6 +19,7 @@
           "className"
         ]
       }
-    ]
+    ],
+    "no-console": "warn"
   }
 }

@@ -21,8 +21,6 @@ const sortEvents = (events) => {
 const Home = () => {
   const audio = useRef(new Audio(alarm))
   const [sortedEvents, setSortedEvents] = useState([])
-  console.log('sortedEvents:', sortedEvents.length)
-  console.log('events:', events.length)
   const [isEnabled, setEnabled] = useState(false)
 
   useEffect(() => {
@@ -53,7 +51,7 @@ const Home = () => {
       <Helmet>
         <title>MU 2 Events Timer</title>
       </Helmet>
-      <div className='my-10'>
+      <div className='py-10'>
         {sortedEvents[0] && <div className='w-11/12 md:w-3/4 mx-auto mb-10'>
           <Button onClick={enableAlarm}>{isEnabled ? 'Disable' : 'Enable'} alarm</Button>
           <EventCard event={sortedEvents[0]} onAlarm={onAlarm} onZero={onZero} />
