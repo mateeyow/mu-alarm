@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { HelmetProvider } from 'react-helmet-async'
+import './assets/main.css';
 import * as serviceWorker from './serviceWorker';
+import Home from './pages/Home'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <HelmetProvider>
+    <Home />
+  </HelmetProvider>,
   document.getElementById('root')
 );
 
