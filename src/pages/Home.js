@@ -3,14 +3,11 @@ import { Helmet } from 'react-helmet-async'
 import { compareAsc } from 'date-fns'
 import canAutoplay from 'can-autoplay'
 import Container from '../components/Container'
-import Card from '../components/Card'
-import Title from '../components/text/Title'
-import Subtitle from '../components/text/Subtitle'
 import events from '../events'
-import Countdown from '../components/Countdown'
 import { computeDate } from "../utils/utils"
 import alarm from '../assets/alarm.mp3'
 import Button from '../components/Button'
+import EventCard from '../components/EventCard'
 
 const sortEvents = (events) => {
   return events
@@ -24,6 +21,8 @@ const sortEvents = (events) => {
 const Home = () => {
   const audio = useRef(new Audio(alarm))
   const [sortedEvents, setSortedEvents] = useState([])
+  console.log('sortedEvents:', sortedEvents.length)
+  console.log('events:', events.length)
   const [isEnabled, setEnabled] = useState(false)
 
   useEffect(() => {
@@ -55,29 +54,13 @@ const Home = () => {
         <title>MU 2 Events Timer</title>
       </Helmet>
       <div className='my-10'>
-        {sortedEvents[0] && <div className='w-3/4 mx-auto mb-10'>
+        {sortedEvents[0] && <div className='w-11/12 md:w-3/4 mx-auto mb-10'>
           <Button onClick={enableAlarm}>{isEnabled ? 'Disable' : 'Enable'} alarm</Button>
-          <Card className='mt-2'>
-            <div className='flex flex-row justify-between'>
-              <div>
-                <Title>{sortedEvents[0].title}</Title>
-                <Subtitle className='mt-2'>{sortedEvents[0].description}</Subtitle>
-              </div>
-              <Countdown date={sortedEvents[0].datetime} onZero={onZero} onAlarm={onAlarm} />
-            </div>
-          </Card>
+          <EventCard event={sortedEvents[0]} onAlarm={onAlarm} onZero={onZero} />
         </div>}
-        <div className='w-2/4 mx-auto'>
+        <div className='w-10/12 md:w-2/4 mx-auto'>
           {sortedEvents.filter((event, idx) => idx !== 0).map((event, idx) =>
-            <Card key={idx} className='mt-2'>
-              <div className='flex flex-row justify-between'>
-                <div>
-                  <Title>{event.title}</Title>
-                  <Subtitle className='mt-2'>{event.description}</Subtitle>
-                </div>
-                <Countdown date={event.datetime} onZero={onZero} onAlarm={onAlarm} />
-              </div>
-            </Card>
+            <EventCard key={idx} event={event} onAlarm={onAlarm} onZero={onZero} />
           )}
         </div>
       </div>
