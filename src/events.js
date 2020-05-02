@@ -80,6 +80,16 @@ export default [
     ]
   },
   {
+    title: "Abyss Song of Ice and Fire",
+    description: "Defeat enemies and occupy cannon towers to win!",
+    schedule: [
+      {
+        frequency: "Saturday",
+        time: "21:00"
+      }
+    ]
+  },
+  {
     title: "Lost Tower",
     description: "Pick up glyps and pick up keys to proceed to the next floor",
     schedule: [
