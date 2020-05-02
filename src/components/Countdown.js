@@ -25,7 +25,7 @@ const Countdown = ({ date, onZero, onAlarm }) => {
   }, 1000);
 
   return (
-    <div className='uppercase font-medium text-gray-800'>{timer}</div>
+    <div className='uppercase font-medium text-gray-800 dark:text-gray-200'>{timer}</div>
   )
 }
 

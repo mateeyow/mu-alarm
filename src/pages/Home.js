@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { compareAsc } from 'date-fns'
 import canAutoplay from 'can-autoplay'
+import store from 'store2'
 import Container from '../components/Container'
 import events from '../events'
 import { computeDateTime } from "../utils/utils"
@@ -31,13 +32,41 @@ const Home = () => {
   const audio = useRef(new Audio(alarm))
   const [sortedEvents, setSortedEvents] = useState([])
   const [isEnabled, setEnabled] = useState(false)
+  const [isDarkMode, setDarkMode] = useState(store('darkMode'))
 
   useEffect(() => {
     setSortedEvents(sortEvents(events))
     canAutoplay.audio().then(({ result }) => {
       setEnabled(result)
     })
+
+    function checkDarkMode() {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        return setDarkMode(true)
+      }
+      setDarkMode(false)
+    }
+
+    if (store('darkMode') === null) {
+      if (checkDarkMode()) {
+        store('darkMode', true)
+        document.documentElement.classList.add('mode-dark');
+      } else {
+        store('darkMode', false)
+        document.documentElement.classList.remove('mode-dark');
+      }
+    }
   }, [])
+
+  useEffect(() => {
+    if (isDarkMode) {
+      store('darkMode', true)
+      document.documentElement.classList.add('mode-dark');
+    } else {
+      store('darkMode', false)
+      document.documentElement.classList.remove('mode-dark');
+    }
+  }, [isDarkMode])
 
   const onZero = () => {
     setSortedEvents(sortEvents(events))
@@ -63,6 +92,7 @@ const Home = () => {
       <div className='py-10'>
         {sortedEvents[0] && <div className='w-11/12 md:w-3/4 mx-auto mb-10'>
           <Button onClick={enableAlarm}>{isEnabled ? 'Disable' : 'Enable'} alarm</Button>
+          <Button className='ml-4' onClick={() => setDarkMode(!isDarkMode)}>{isDarkMode ? 'Disable' : 'Enable'} dark mode</Button>
           <EventCard event={sortedEvents[0]} onAlarm={onAlarm} onZero={onZero} />
         </div>}
         <div className='w-10/12 md:w-2/4 mx-auto'>
