@@ -265,4 +265,54 @@ export default [
       },
     ]
   },
+  {
+    title: "Abyss Demonlord Raid",
+    description: "Kill all the demonlord boss and get rewards",
+    schedule: [
+      {
+        frequency: 'Everyday',
+        time: '19:00'
+      }
+    ]
+  },
+  {
+    title: "Abyss Elemental Trial",
+    description: "Kill elemental mobs to complete five elements' test to earn the elemental envoys' gift",
+    schedule: [
+      {
+        frequency: 'Everyday',
+        time: '14:30'
+      },
+      {
+        frequency: 'Everyday',
+        time: '19:00'
+      }
+    ]
+  },
+  {
+    title: "Abyss Elemental Fairyland",
+    description: "Team up with your alliance to defeat the trials of Elemental Emissaries",
+    schedule: [
+      {
+        frequency: 'Monday',
+        time: '18:30'
+      },
+      {
+        frequency: 'Tuesday',
+        time: '18:30'
+      },
+      {
+        frequency: 'Wednesday',
+        time: '18:30'
+      },
+      {
+        frequency: 'Thursday',
+        time: '18:30'
+      },
+      {
+        frequency: 'Friday',
+        time: '18:30'
+      },
+    ]
+  },
 ]
