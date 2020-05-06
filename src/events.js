@@ -285,7 +285,7 @@ export default [
       },
       {
         frequency: 'Everyday',
-        time: '19:00'
+        time: '20:00'
       }
     ]
   },
