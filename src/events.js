@@ -100,6 +100,16 @@ export default [
     ]
   },
   {
+    title: "Abyss Lost Tower",
+    description: "Pick up glyps and pick up keys to proceed to the next floor",
+    schedule: [
+      {
+        frequency: "Thursday",
+        time: "22:00"
+      }
+    ]
+  },
+  {
     title: "Lost City",
     description: "Defeat monsters and boss along with your alliance",
     schedule: [
